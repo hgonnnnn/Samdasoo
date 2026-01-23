@@ -1,6 +1,6 @@
 $(function () {
-    $('#header').load('/common/header.html');
-    $('#footer').load('/common/footer.html');
+    $('#header').load('/Samdasoo/common/header.html');
+    $('#footer').load('/Samdasoo/common/footer.html');
 });
 /* 깃허브 업로드 시 common 앞부분에 폴더 경로 추가 */
 
