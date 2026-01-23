@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'SUIT';
+    src: url('../font/SUIT-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT';
+    src: url('../font/SUIT-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT';
+    src: url('../font/SUIT-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT';
+    src: url('../font/SUIT-ExtraBold.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Book';
+    src: url('../font/BookkMyungjo_Bold.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Maru';
+    src: url('../font/MaruBuri-Regular.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} /* 필수 */
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #2a2a2a;
+    overflow-X: hidden;
+}
+html {
+     scroll-behavior: smooth;
+}
+body, html, header, footer {
+    font-family: 'SUIT';
+    font-weight: 500;
+}
+button {
+    overflow: visible;
+    text-transform: none;
+    background-color: transparent;
+    border: unset;
+}
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+a, p, strong, li, span {
+    word-break: keep-all;
+    line-height: 1.3;
+}

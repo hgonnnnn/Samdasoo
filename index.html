@@ -1,11 +1,249 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제주삼다수</title>
+    <link rel="stylesheet" href="lib/aos.css">
+    <link rel="stylesheet" href="lib/fancybox.css">
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <script src="lib/aos.js"></script>
+    <script src="lib/fancybox.umd.js"></script>
+    <script src="lib/gsap.min.js"></script>
+    <script src="lib/ScrollTrigger.min.js"></script>
+    <script src="lib/lenis.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
-<body>
-    
+
+<body id="main">
+    <header id="header"></header>
+    <div class="main_visual on">
+        <div class="tit">
+            <strong><span class="sp01">Jeju’s</span> <span class="sp02">Life Force,</span> <br>
+                <span class="sp03">Awakening Your</span> <span class="sp04">Daily Routine.</span></strong>
+            <p>태초의 깨끗함 그대로, 제주의 숨결을 마시다.</p>
+        </div>
+    </div><!-- .main_visual end -->
+    <div class="sec01">
+        <figure>
+            <img src="img/main01.jpg" alt="제주삼다수">
+        </figure>
+    </div><!-- .sec01 end -->
+    <section class="sec02">
+        <div class="wrap">
+            <div class="txt left" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <strong>JEJU</strong>
+                <p>188만 년 전 자연이 만들어 낸 신비의 섬 제주 시간의 힘으로 켜켜이 쌓아 올린 제주 헤리티지가 만들어 낸 고귀한 물.</p>
+            </div><!-- .txt -->
+            <div class="img_wrap" data-aos="fade" data-aos-duration="1000">
+                <img src="img/sec02.jpg" alt="제주삼다수">
+            </div><!-- .img_wrap end -->
+            <div class="txt right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <strong>PURE</strong>
+                <p>지하 420m 화산암반층에서 시작된 맑고 깨끗한 물, 제주삼다수는 국내 유일 화산 암반수입니다.</p>
+            </div><!-- .txt -->
+        </div>
+    </section><!-- .sec02 end -->
+    <section class="sec03">
+        <div class="item">
+            <div class="bg"></div>
+            <div class="wrap01">
+                <div class="txt">
+                    <span>Journey</span>
+                    <strong>우리의 여정</strong>
+                    <p>친환경 제품 개발과 경량화, 자원 선순환 활동을 통해 플라스틱 문제 해결에 동참하고 있습니다.</p>
+                    <a href="#" class="main_more">바로가기 <span>→</span></a>
+                </div>
+                <div class="img_wrap">
+                    <img src="img/main_slide01.jpg">
+                </div>
+            </div>
+        </div><!-- .item end -->
+        <div class="item">
+            <div class="bg"></div>
+            <div class="wrap01">
+                <div class="txt">
+                    <span>Effort</span>
+                    <strong>우리의 노력</strong>
+                    <p>자연에 더 이롭게 비워 나가겠습니다. <br>무색병, 무색캡, 무라벨 그리고 재활용 소재가 그 시작입니다.</p>
+                    <a href="#" class="main_more">바로가기 <span>→</span></a>
+                </div>
+                <div class="img_wrap">
+                    <img src="img/effort01.jpg">
+                </div>
+            </div>
+        </div><!-- .item end -->
+        <div class="item">
+            <div class="bg"></div>
+            <div class="wrap01">
+                <div class="txt">
+                    <span>Challenge</span>
+                    <strong>우리의 도전</strong>
+                    <p>2025년까지 플라스틱 포장재를 100% 재활용 가능하게 만들고, 2030년까지 플라스틱 사용량을 20% 줄이고자 합니다.</p>
+                    <a href="#" class="main_more">바로가기 <span>→</span></a>
+                </div>
+                <div class="img_wrap">
+                    <img src="img/challenge01.jpg">
+                </div>
+            </div>
+        </div><!-- .item end -->
+    </section><!-- .sec03 end -->
+    <section class="sec04">
+        <div class="wrap01">
+            <div class="tit" data-aos="fade-up" data-aos-duration="1000">
+                <strong>NEWS</strong>
+                <p>멈추지 않는 도전, 삼다수의 최신 뉴스를 확인하세요.</p>
+            </div>
+            <div class="listImg">
+                <ul>
+                    <li><img src="img/main_news01.jpg" /></li>
+                    <li><img src="img/main_news02.jpg" /></li>
+                    <li><img src="img/main_news03.jpg" /></li>
+                </ul>
+            </div>
+            <ul class="list">
+                <li data-index="0">
+                    <a href="#">
+                        <strong>제주삼다수, 브랜드 새 얼굴 박보영과 신규 광고 본편 온에어</strong>
+                        <p>제주삼다수 신규 모델과 함께한 TVCF, 10일 첫 공개</p>
+                        <span>2025-04-09</span>
+                    </a>
+                </li>
+                <li data-index="1">
+                    <a href="#">
+                        <strong>국내 생수 업계 최초 ‘다이아몬드 테이스트 어워드’ 수상</strong>
+                        <p>제주삼다수가 ‘2024 국제식음료품평회’에서 국내 최초로 ‘다이아몬드 테이스트 어워드’를 수상하며 세계적인 물맛을 또 한 번 입증했다.<br>제주삼다수는 우수한 물맛을
+                            입증하며 ‘국제식음료품평회’에서 최고 등급인 3스타를 7년 연속 획득</p>
+                        <span>2024-01-16</span>
+                    </a>
+                </li>
+                <li data-index="2">
+                    <a href="#">
+                        <strong>제주삼다수, 인기 캐릭터 ‘잔망루피’의 색다른 콜라보 전개</strong>
+                        <p>제주삼다수가 2030세대가 사랑하는 캐릭터 ‘잔망루피’와 손잡고 콜라보레이션 화보와 굿즈를 선보인다. <br>
+                            제주삼다수는 13일 공개한 '제주삼다수-잔망루피 콜라보레이션 화보’를 통해 ESG 메시지를 재치있게 풀어내고 , 2030 고객들과 지속가능한</p>
+                        <span>2023-12-14</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section><!-- .sec04 end -->
+    <section class="sec05">
+        <div class="wrap">
+            <div class="txt">
+                <strong>나를 아끼는 가장 쉬운 방법, <br>제주 한 모금</strong>
+                <p>우리가 믿는 물, 제주삼다수 <br>앞으로도 늘 지금처럼 깨끗하고 맑을 것을 약속합니다.</p>
+                <a href="#" class="main_more">바로가기 <span>→</span></a>
+            </div>
+        </div>
+    </section>
+    <footer id="footer"></footer>
 </body>
+<script>
+    // 스크롤 잠금
+    function lockScroll() {
+        document.body.classList.add('scroll_lock');
+        lenis.stop(); // Lenis 스크롤 중단
+    }
+
+    // 스크롤 해제
+    function unlockScroll() {
+        document.body.classList.remove('scroll_lock');
+        lenis.start(); // Lenis 다시 시작
+    }
+
+    // 최초 진입 시
+    lockScroll();
+
+    // 4.7초 후 해제
+    setTimeout(() => {
+        unlockScroll();
+    }, 4700);
+</script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("#main .sec01", {
+        height: "75vh",
+        width: "100%",
+        borderRadius: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#main .sec01",
+            start: "top 80%",
+            end: "top top",
+            scrub: true
+        }
+    });
+</script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const items = gsap.utils.toArray("#main .sec03 .item");
+    const section = document.querySelector("#main .sec03");
+
+    // item 개수 + 1 만큼 height 자동 설정
+    section.style.height = `${(items.length + 1) * 100}vh`;
+
+    items.forEach((item, index) => {
+
+        if (index === 0) return;
+
+        gsap.fromTo(
+            item,
+            { clipPath: "inset(100% 0% 0% 0%)" },
+            {
+                clipPath: "inset(0% 0% 0% 0%)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: () => `top+=${index * window.innerHeight} top`,
+                    end: () => `top+=${(index + 1) * window.innerHeight} top`,
+                    scrub: 0.5
+                    // markers: true
+                }
+            }
+        );
+    });
+</script>
+<script>
+    const cursor = document.querySelector('.sec04 .listImg');
+    const cursorUl = cursor.querySelector('.sec04 ul');
+    const items01 = document.querySelectorAll('.sec04 .list li');
+
+    // scale 상태를 별도로 관리
+    let isHover = false;
+
+    // 마우스 따라다니기 (scale 제외!)
+    window.addEventListener('mousemove', (e) => {
+        const scaleValue = isHover ? 1 : 0;
+        cursor.style.transform =
+            `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) scale(${scaleValue})`;
+    });
+
+    // Hover 이벤트
+    items01.forEach((li) => {
+        li.addEventListener('mouseenter', () => {
+            isHover = true;
+            const index = li.dataset.index;
+            cursorUl.style.top = `${index * -320}px`;
+        });
+
+        li.addEventListener('mouseleave', () => {
+            isHover = false;
+        });
+    });
+</script>
+<script>
+    AOS.init();
+</script>
+
 </html>

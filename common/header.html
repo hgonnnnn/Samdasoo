@@ -1,0 +1,96 @@
+<div class="wrap">
+    <h1><a href="#"><img src="/img/logo.png" alt="logo"></a></h1>
+    <nav class="pc_nav">
+        <ul class="gnb">
+            <li>
+                <a href="#" class="depth01">STORY</a>
+                <ul class="depth02">
+                    <li><a href="#">제주삼다수</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="depth01">PRODUCTS</a>
+            </li>
+            <li>
+                <a href="#" class="depth01">NEWS</a>
+            </li>
+            <li>
+                <a href="#" class="depth01">FAQ</a>
+            </li>
+            <li>
+                <a href="#" class="depth01">EVENT</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="util">
+        <button class="open"><img src="/img/menu.png" alt="menu"></button>
+        <nav class="mob_nav">
+            <button class="close"><img src="/img/close.png" alt="close"></button>
+            <ul class="gnb">
+                <li>
+                    <a href="#" class="depth01" onclick="return false;">STORY</a>
+                    <ul class="depth02">
+                        <li><a href="#">제주삼다수</a></li>
+                        <li><a href="#">연혁</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="depth01">PRODUCTS</a>
+                </li>
+                <li>
+                    <a href="#" class="depth01">NEWS</a>
+                </li>
+                <li>
+                    <a href="#" class="depth01">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="depth01">EVENT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('.pc_nav .gnb > li').mouseenter(function(){
+            $('.pc_nav .gnb > li').removeClass('on')
+            $('.pc_nav .gnb > li').eq($(this).index()).addClass('on');
+        });
+        $('.pc_nav .gnb').mouseleave(function(){
+             $('.pc_nav .gnb > li').removeClass('on')
+        })
+    });
+    $(function () {
+        $('.util .open').click(function () {
+            $('.mob_nav').addClass('on')
+        });
+        $('.util .gnb > li').mouseenter(function () {
+            $('.util .gnb > li').removeClass('on');
+            $('.util .gnb > li').eq($(this).index()).addClass('on');
+        });
+        $('.util .gnb > li').mouseleave(function () {
+            $('.util .gnb > li').removeClass('on');
+        });
+        $('.util .gnb > li').click(function (e) {
+            e.preventDefault(); // a태그 클릭 이동 방지 (필요 시)
+
+            const idx = $(this).index();
+            const target = $('.util .gnb > li .depth02').eq(idx);
+
+            if (target.hasClass('on')) {
+                // 이미 열려 있으면 닫기
+                target.removeClass('on');
+            } else {
+                // 다른 메뉴 닫고 클릭한 것만 열기
+                $('.util .gnb > li .depth02').removeClass('on');
+                target.addClass('on');
+            }
+        });
+    });
+    $(function () {
+        $('.util .close').click(function () {
+            $('.mob_nav').removeClass('on')
+        });
+    });
+</script>

@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("common.css");
+
+.wrap01 {
+    width: calc(100% - 60px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+#main {
+    transition: padding-right 0.2s ease;
+}
+#main section {
+    margin: 120px 0;
+}
+#main.scroll_lock {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+#main.scroll_lock::-webkit-scrollbar {
+    display: none;
+}
+/* Firefox */
+#main.scroll_lock {
+    scrollbar-width: none;
+}
+
+#main .main_visual {
+    position: relative;
+}
+#main .main_visual .tit {
+    position: relative;
+    margin: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
+}
+#main .main_visual .tit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    animation: slide-rotate-hor-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s both;
+}
+#main .main_visual .tit strong {
+    font-size: 75px;
+}
+#main .main_visual .tit strong span {
+    font-family: "Book";
+    font-weight: 900;
+    display: inline-block;
+}
+#main .main_visual .tit strong .sp01 {
+    animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+#main .main_visual .tit strong .sp02 {
+    animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.3s both;
+}
+#main .main_visual .tit strong .sp03 {
+    animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s both;
+}
+#main .main_visual .tit strong .sp04 {
+    animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.7s both;
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes center {
+    0% {
+        transform: translateY(150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slide-rotate-hor-top {
+    0% {
+        -webkit-transform: translateY(0) rotateX(0deg);
+        transform: translateY(0) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-150px) rotateX(-90deg);
+        transform: translateY(-150px) rotateX(-90deg);
+    }
+}
+#main .main_visual .tit p {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #444;
+    font-weight: 600;
+    animation: focus-in-expand 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.3s both;
+}
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+#main .sec01 {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#main .sec01 figure {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#main .sec01 figure img {
+    width: 100%;
+    object-fit: cover;
+}
+#main .sec02 {
+    position: relative;
+    height: 60vh;
+}
+#main .sec02 .wrap {
+    align-items: flex-start;
+}
+#main .sec02 .wrap > div {
+    width: calc(100% / 3 - 20px);
+}
+#main .sec02 .wrap .txt {
+    position: relative;
+}
+#main .sec02 .wrap .txt strong {
+    font-size: 150px;
+    font-weight: 900;
+}
+#main .sec02 .wrap .txt p {
+    width: 70%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #444;
+    line-height: 1.4;
+}
+#main .sec02 .wrap .txt.left {
+}
+#main .sec02 .wrap .txt.right {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#main .sec02 .wrap .img_wrap {
+    position: sticky;
+    top: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#main .sec02 .wrap .img_wrap img {
+    width: 100%;
+}
+#main .sec03 {
+    position: relative;
+    height: calc(100vh * 4);
+}
+#main .sec03 .item {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    inset: 0;
+    padding: 120px 0;
+    background-size: cover;
+    background-position: center;
+
+    clip-path: inset(0 0 0 0);
+    will-change: clip-path;
+}
+#main .sec03 > div:nth-child(1) {
+    background-image: url("../img/main_bg01.jpg");
+}
+#main .sec03 > div:nth-child(2) {
+    background-image: url("../img/effort02.jpg");
+}
+#main .sec03 > div:nth-child(3) {
+    background-image: url("../img/challenge02.jpg");
+}
+#main .sec03 .item .wrap01 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+#main .sec03 .item .wrap01 > div {
+    width: calc(100% / 2 - 40px);
+}
+#main .sec03 .item .wrap01 .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main .sec03 .item .wrap01 .txt > span {
+    font-family: "Maru";
+    color: #eee;
+    font-size: 26px;
+}
+#main .sec03 .item .wrap01 .txt strong {
+    font-size: 62px;
+    font-weight: 700;
+    color: #fafafa;
+    display: inline-block;
+    margin: 5px 0 70px;
+}
+#main .sec03 .item .wrap01 .txt p {
+    width: 60%;
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+a.main_more {
+    display: flex;
+    align-items: center;
+    font-family: "SUIT";
+    font-size: 18px;
+    color: #fafafa;
+    font-weight: 500;
+    column-gap: 12px;
+}
+a.main_more span {
+    position: relative;
+    font-family: "SUIT";
+    font-weight: 500;
+    z-index: 0;
+}
+a.main_more span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: #0067ff;
+    border-radius: 50%;
+    z-index: -1;
+}
+#main .sec03 .item .wrap01 .img_wrap {
+}
+#main .sec03 .item .wrap01 .img_wrap img {
+    width: 100%;
+}
+
+#main .sec04 {
+}
+#main .sec04 .wrap01 {
+}
+#main .sec04 .wrap01 .tit {
+    margin-bottom: 20px;
+}
+#main .sec04 .wrap01 .tit strong {
+    font-size: 72px;
+    font-weight: 900;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+#main .sec04 .wrap01 .tit p {
+    font-size: 18px;
+    color: #444;
+}
+#main .sec04 .wrap01 ul.list {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+#main .sec04 .wrap01 ul.list li {
+}
+#main .sec04 .wrap01 ul.list li a {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    border-bottom: 1px solid #999;
+}
+#main .sec04 .wrap01 ul.list li:last-child a {
+    border-bottom: unset;
+}
+#main .sec04 .wrap01 ul.list li a strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+}
+#main .sec04 .wrap01 ul.list li a p {
+    width: 60%;
+    font-weight: 500;
+    color: #666;
+    padding-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#main .sec04 .wrap01 ul.list li a span {
+    font-size: 15px;
+    color: #999;
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.listImg {
+    width: 350px;
+    height: auto;
+    aspect-ratio: 1/0.8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0);
+    background: linear-gradient(to top, #555, #222);
+    overflow: hidden;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    z-index: 999;
+}
+
+.listImg ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: top 0.3s ease;
+    top: 0;
+}
+
+.listImg li {
+    width: 100%;
+    height: 320px;
+}
+
+.listImg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.sec05 {
+    height: 650px;
+}
+.sec05 .wrap {
+    background: url("../img/main_banner.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    justify-content: center;
+}
+.sec05 .wrap .txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fafafa;
+}
+.sec05 .wrap .txt strong {
+    font-size: 52px;
+    font-weight: 700;
+}
+.sec05 .wrap .txt p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ccc;
+    line-height: 1.4;
+    margin: 10px 0 60px;
+}

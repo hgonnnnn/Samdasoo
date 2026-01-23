@@ -1,0 +1,36 @@
+<div class="wrap">
+    <div class="left">
+        <div class="top">
+            <a href="#">개인정보처리방침</a>
+            <a href="#">저작권보호정책</a>
+        </div>
+        <ul>
+            <li><p>주 소</p><a href="#" id="copyAdd">제주특별자치도 제주시 조천읍 남조로 1717-35</a></li>
+            <li><p>대표전화</p><a href="tel:064-780-3300">(064)780-3300</a>,(국번없이)1636 (제주개발공사 또는 삼다수를 말하세요)</li>
+            <li><p>팩 스</p><a href="#" id="copyFax">(064)784-5020</a></li>
+        </ul>
+    </div><!-- .left end -->
+    <div class="right">
+        <a href="#"><img src="img/logo_w.png" alt="logo"></a>
+        <ul>
+            <li><a href="#"><img src="img/sns01.png" alt="유튜브"></a></li>
+            <li><a href="#"><img src="img/sns02.png" alt="인스타그램"></a></li>
+            <li><a href="#"><img src="img/sns03.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="img/sns04.png" alt="네이버"></a></li>
+        </ul>
+    </div>
+</div><!-- .wrap end -->
+<script>
+  document.getElementById('copyAdd').addEventListener('click', function(e) {
+    e.preventDefault(); // 페이지 이동 막기
+    navigator.clipboard.writeText('제주특별자치도 제주시 조천읍 남조로 1717-35').then(() => {
+      alert('클립보드에 복사되었습니다.');
+    });
+  });
+  document.getElementById('copyFax').addEventListener('click', function(e) {
+    e.preventDefault(); // 페이지 이동 막기
+    navigator.clipboard.writeText('(064)784-5020').then(() => {
+      alert('클립보드에 복사되었습니다.');
+    });
+  });
+</script>
