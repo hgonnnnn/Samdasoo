@@ -31,7 +31,7 @@
 }
 #main .main_visual .tit {
     position: relative;
-    margin: 120px 0;
+    margin: 120px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,6 +183,9 @@
     height: calc(100vh * 4);
 }
 #main .sec03 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -220,6 +223,7 @@
     font-family: "Maru";
     color: #eee;
     font-size: 26px;
+    margin-left: 5px;
 }
 #main .sec03 .item .wrap01 .txt strong {
     font-size: 62px;
@@ -365,6 +369,7 @@ a.main_more span::before {
     background-size: cover;
     border-radius: 20px;
     justify-content: center;
+    width: calc(100% - 60px);
 }
 .sec05 .wrap .txt {
     display: flex;
@@ -383,5 +388,186 @@ a.main_more span::before {
     font-weight: 500;
     color: #ccc;
     line-height: 1.4;
-    margin: 10px 0 60px;
+    margin: 10px 5px 60px;
+}
+
+/* 반응형 20260127 */
+@media all and (max-width: 1300px) {
+    #main .main_visual .tit strong {
+        font-size: 68px;
+    }
+    #main .sec02 .wrap .txt strong {
+        font-size: 100px;
+    }
+    #main .sec02 .wrap .txt p {
+        width: 80%;
+        font-size: 18px;
+    }
+    #main .sec02 .wrap .img_wrap {
+        position: unset;
+        height: 100%;
+    }
+    #main .sec02 .wrap .img_wrap img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #main .main_visual .tit strong {
+        font-size: 56px;
+    }
+    #main .main_visual .tit p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    #main .sec02 {
+        height: auto;
+    }
+    #main .sec02 .wrap .txt.right {
+        align-items: flex-end;
+        text-align: end;
+    }
+    #main .sec02 .wrap .txt p {
+        width: 95%;
+        margin-top: 10px;
+    }
+    #main .sec02 .wrap .txt strong {
+        font-size: 68px;
+    }
+    #main .sec03 .item .wrap01 .txt > span {
+        font-size: 20px;
+    }
+    #main .sec03 .item .wrap01 .txt strong {
+        font-size: 56px;
+        margin: 5px 0 50px;
+    }
+    #main .sec03 .item .wrap01 .txt p {
+        width: 95%;
+        font-size: 18px;
+    }
+    #main .sec04 .wrap01 .tit strong {
+        font-size: 56px;
+    }
+    #main section.sec05 {
+        margin-bottom: 30px;
+    }
+    .sec05 {
+        height: 500px;
+    }
+    .sec05 .wrap .txt strong {
+        font-size: 46px;
+    }
+    .sec05 .wrap .txt p {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    #main section {
+        margin: 80px 0;
+    }
+    #main .main_visual .tit {
+        margin: 120px 30px 60px;
+    }
+    #main .sec02 .wrap {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    #main .sec02 .wrap > div {
+        width: 100%;
+    }
+    #main .sec02 .wrap .img_wrap {
+        aspect-ratio: 1/0.65;
+    }
+    #main .sec02 .wrap .txt p {
+        width: 75%;
+    }
+    #main .sec03 .item .wrap01 {
+        flex-direction: column-reverse;
+    }
+    #main .sec03 .item .wrap01 > div {
+        width: 100%;
+    }
+    #main .sec03 .item .wrap01 .img_wrap img {
+        aspect-ratio: 1/0.5;
+        object-fit: cover;
+    }
+    #main .sec03 .item .wrap01 {
+        gap: 40px 0;
+    }
+    #main .sec03 .item .wrap01 .txt strong, #main .sec04 .wrap01 .tit strong {
+        font-size: 46px;
+    }
+    #main .sec03 .item .wrap01 .txt strong {
+        margin-bottom: 25px;
+    }
+    #main .sec03 .item .wrap01 .txt p, #main .sec04 .wrap01 .tit p {
+        font-size: 16px;
+    }
+    #main .sec04 .wrap01 ul.list li a strong {
+        font-size: 18px;
+    }
+    #main .sec04 .wrap01 ul.list li a p {
+        width: 80%;
+    }
+    #main .sec04 .wrap01 ul.list li a p br {
+        display: none;
+    }
+    #main .sec04 .wrap01 ul.list li a span {
+        font-size: 14px;
+    }
+    .sec05 .wrap .txt strong {
+        font-size: 36px;
+    }
+    .sec05 .wrap .txt p {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+    .sec05 {
+        height: 45vh;
+    }
+}
+
+@media all and (max-width: 650px) {
+    #main .main_visual .tit strong {
+        font-size: 35px;
+    }
+    #main .main_visual .tit p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    #main .sec02 .wrap .txt strong {
+        font-size: 54px;
+    }
+    #main .sec02 .wrap .txt p {
+        font-size: 16px;
+    }
+    #main .sec03 .item .wrap01 .txt strong, #main .sec04 .wrap01 .tit strong {
+        font-size: 40px;
+    }
+    .sec05 .wrap .txt strong {
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #main .main_visual .tit strong {
+        font-size: 32px;
+    }
+    #main .sec02 .wrap .txt strong {
+        font-size: 48px;
+    }
+    #main .sec02 .wrap .txt p {
+        width: 100%;
+    }
+    #main .sec03 .item .wrap01 .img_wrap img {
+        aspect-ratio: 1/0.7;
+    }
+    #main .sec03 .item .wrap01 .txt strong, #main .sec04 .wrap01 .tit strong {
+        font-size: 34px;
+    }
+    #main .sec04 .wrap01 ul.list li a p {
+        width: 100%;
+    }
 }
