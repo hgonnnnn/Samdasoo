@@ -194,7 +194,7 @@
 #footer .wrap .right ul {display: flex; align-items: center; column-gap: 25px;}
 #footer .wrap .right ul li {}
 #footer .wrap .right ul li a {display: flex;}
-#footer .wrap .right ul li a img {}
+#footer .wrap .right ul li a img {width: 100%;}
 
 /* 반응형 20261020 */
 @media all and (max-width: 1200px) {
@@ -238,11 +238,59 @@
         top: 60px;
         right: 40px;
     }
+    #footer .wrap {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    #footer .wrap > div {
+        width: 100%;
+    }
+    #footer .wrap .right {
+        align-items: center;
+        flex-direction: unset;
+    }
+    #footer .wrap .right ul li a {
+        width: 45px;
+    }
+    #footer .wrap .right > a {
+        width: 150px;
+        display: flex;
+    }
+    #footer .wrap .right > a img {
+        width: 100%;
+    }
 }
 @media all and (max-width: 500px) {
     #header .wrap .util .mob_nav {
         min-width: unset;
         width: 100vw;
+    }
+    #footer {
+        padding: 40px 0 60px;
+    }
+    #footer .wrap .right > a {
+        display: none;
+    }
+    #footer .wrap .left {
+        text-align: center;
+    }
+    #footer .wrap .left .top {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #footer .wrap .left ul {
+        row-gap: 15px;
+    }
+    #footer .wrap .left ul li {
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    #footer .wrap .left ul li p {
+        min-width: unset;
+        margin-right: 0;
+    }
+    #footer .wrap .right {
+        justify-content: center;
     }
 }
 @media all and (max-width: 400px) {
