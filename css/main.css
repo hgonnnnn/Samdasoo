@@ -232,7 +232,7 @@
     display: inline-block;
     margin: 5px 0 70px;
 }
-#main .sec03 .item .wrap01 .txt p {
+#main .sec03 .item .wrap01 .txt > p {
     width: 60%;
     font-size: 20px;
     color: #ccc;
@@ -247,6 +247,25 @@ a.main_more {
     color: #fafafa;
     font-weight: 500;
     column-gap: 12px;
+    position: relative;
+}
+ a.main_more > p {
+    transition: 0.5s;
+}
+a.main_more p.b {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0, 100%) rotateX(-90deg);
+    opacity: 0;
+}
+a.main_more:hover p.t{
+    transform: translate(0, -100%) rotateX(90deg);
+    opacity: 0;
+}
+a.main_more:hover p.b{
+    opacity: 1;
+    transform: none;
 }
 a.main_more span {
     position: relative;
@@ -383,7 +402,7 @@ a.main_more span::before {
     font-size: 52px;
     font-weight: 700;
 }
-.sec05 .wrap .txt p {
+.sec05 .wrap .txt > p {
     font-size: 20px;
     font-weight: 500;
     color: #ccc;
@@ -442,7 +461,7 @@ a.main_more span::before {
         font-size: 56px;
         margin: 5px 0 50px;
     }
-    #main .sec03 .item .wrap01 .txt p {
+    #main .sec03 .item .wrap01 .txt > p {
         width: 95%;
         font-size: 18px;
     }
@@ -502,7 +521,7 @@ a.main_more span::before {
     #main .sec03 .item .wrap01 .txt strong {
         margin-bottom: 25px;
     }
-    #main .sec03 .item .wrap01 .txt p, #main .sec04 .wrap01 .tit p {
+    #main .sec03 .item .wrap01 .txt > p, #main .sec04 .wrap01 .tit p {
         font-size: 16px;
     }
     #main .sec04 .wrap01 ul.list li a strong {
@@ -520,7 +539,7 @@ a.main_more span::before {
     .sec05 .wrap .txt strong {
         font-size: 36px;
     }
-    .sec05 .wrap .txt p {
+    .sec05 .wrap .txt > p {
         font-size: 16px;
         margin-bottom: 35px;
     }
@@ -568,6 +587,9 @@ a.main_more span::before {
         font-size: 34px;
     }
     #main .sec04 .wrap01 ul.list li a p {
+        width: 100%;
+    }
+    #main .sec03 .item .wrap01 .txt > p {
         width: 100%;
     }
 }
