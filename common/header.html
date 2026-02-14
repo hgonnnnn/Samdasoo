@@ -29,7 +29,7 @@
             <button class="close"><img src="/Samdasoo/img/close.png" alt="close"></button>
             <ul class="gnb">
                 <li>
-                    <a href="#" class="depth01" onclick="return false;">STORY</a>
+                    <a href="#" class="depth01" onclick="return false">STORY</a>
                     <ul class="depth02">
                         <li><a href="/Samdasoo/sub/sub01_01.html">제주삼다수</a></li>
                         <li><a href="#">연혁</a></li>
@@ -73,7 +73,6 @@
             $('.util .gnb > li').removeClass('on');
         });
         $('.util .gnb > li').click(function (e) {
-            e.preventDefault(); // a태그 클릭 이동 방지 (필요 시)
 
             const idx = $(this).index();
             const target = $('.util .gnb > li .depth02').eq(idx);
